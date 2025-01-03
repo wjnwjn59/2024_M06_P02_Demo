@@ -55,6 +55,8 @@ def load_processors():
 
 img_feature_extractor, text_tokenizer = load_processors()
 
+if not os.path.exists(AppConfig().model_weights_path):
+    download_model()
 vqa_model = load_vqa_model()
 
 def main():
@@ -112,6 +114,4 @@ def main():
     footer()
 
 if __name__ == "__main__":
-    if not os.path.exists(AppConfig().model_weights_path):
-        download_model()
     main()
