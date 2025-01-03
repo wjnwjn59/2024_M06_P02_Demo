@@ -10,4 +10,4 @@ torchtext==0.16.2
 torchvision==0.17.0
 torchaudio==2.2.0
 torch==2.2.0
-transformers
+transformers==4.27.1
