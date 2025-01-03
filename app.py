@@ -1,9 +1,10 @@
+import os
 import torch
 import streamlit as st
 import base64
 from PIL import Image
 from config import AppConfig
-from utils import predict
+from utils import predict, download_model
 from components.streamlit_footer import footer
 from vqa_model import VQAModel, TextEncoder, VisualEncoder, Classifier 
 from transformers import AutoTokenizer, ViTImageProcessor
@@ -111,4 +112,6 @@ def main():
     footer()
 
 if __name__ == "__main__":
+    if not os.path.exists(AppConfig().model_weights_path):
+        download_model()
     main()
