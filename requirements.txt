@@ -6,7 +6,7 @@ tqdm>=4.64.0
 Pillow>=7.1.2
 gdown==5.2.0
 htbuilder==0.6.2
-torchtext==0.15.1
+torchtext==0.16.2
 torchvision==0.16.0
 torchaudio==2.1.0
 torch==2.1.0
